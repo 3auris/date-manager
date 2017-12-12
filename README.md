@@ -1,4 +1,4 @@
 ### Package
 aurimasb/DateManager
 
-Owner - Aurimas Bachanovicius
+Owner - _Aurimas Bachanovicius_
