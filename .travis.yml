@@ -1,5 +1,17 @@
 language: php
+
 php:
   - '7.1'
-  - hhvm
-  - nightly
+  - '7.2'
+  - master
+
+branches:
+  only:
+    master
+
+before_install:
+  - composer install
+  - composer clear-cache
+
+script:
+  - vendor/bin/phpunit tests/
