@@ -1,0 +1,21 @@
+{
+    "name": "aurimasb/date-manager",
+    "description": "Date Manager Package library",
+    "type": "library",
+    "require": {
+        "php": ">=7.1"
+    },
+    "license": "mit",
+    "authors": [
+        {
+            "name": "Aurimas Bachanovičius",
+            "email": "aurimas.bachanovicius@metasite.net"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "aurimasb\\DateManager\\": "src/"
+        }
+    }
+}
