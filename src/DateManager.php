@@ -22,6 +22,6 @@ class DateManager
      */
     public static function timestampToDate(int $timestamp): string
     {
-        return date('Y-m-d H:i:s', $timestamp);
+        return gmdate('Y-m-d H:i:s', $timestamp);
     }
 }
