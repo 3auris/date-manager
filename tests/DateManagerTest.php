@@ -20,7 +20,7 @@ class DateManagerTest extends TestCase
         );
 
         $this->assertEquals(
-            '2017-12-12 11:39:19',
+            '2017-12-12 11:39:18',
             DateManager::timestampToDate(1513078758)
         );
 
