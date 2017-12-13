@@ -2,6 +2,7 @@
 declare(strict_types=1);
 
 use aurimasb\DateManager\DateManager;
+use aurimasb\DateManager\Models\Range\RangeUtil;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -12,21 +13,42 @@ use PHPUnit\Framework\TestCase;
 class DateManagerTest extends TestCase
 {
 
-    public function testStringIsCorrect(): void
+    public function testTimestampToDate(): void
     {
-        $this->assertEquals(
-            '2018-11-30 23:00:00',
-            DateManager::timestampToDate(1543618800)
+        $this->assertEquals('2018-11-30 23:01:01',
+            DateManager::timestampToDate(1543618861)
         );
+    }
 
-        $this->assertEquals(
-            '2017-12-12 11:39:18',
-            DateManager::timestampToDate(1513078758)
-        );
+    /**
+     * @dataProvider timestampDoDateDiffProvider
+     * @param int    $diffInt
+     * @param string $diff
+     */
+    public function testDifferentBetweenTimestamps(
+        int $diffInt,
+        string $diff
+    ): void {
+        $rangeMock = $this->getMockBuilder(RangeUtil::class)
+            ->disableOriginalConstructor()
+            ->setMethods(['diff'])
+            ->getMock();
 
-        $this->assertEquals(
-            '2011-08-11 16:05:58',
-            DateManager::timestampToDate(1313078758)
-        );
+        $rangeMock->method('diff')->willReturn($diffInt);
+
+        $dateManagerDiff = DateManager::differentBetweenTimestamps($rangeMock);
+
+        $this->assertEquals($diff, $dateManagerDiff);
+    }
+
+    public function timestampDoDateDiffProvider(): array
+    {
+        return [
+            'diff is zero'                   => [0, '00:00:00'],
+            'diff is 4 hours'                => [14400, '04:00:00'],
+            'diff is 4 hours and one second' => [14401, '04:00:01'],
+            'diff is minus one second'       => [-1, '00:00:01'],
+            'diff is minus fife hundred'     => [-500, '00:08:20'],
+        ];
     }
 }

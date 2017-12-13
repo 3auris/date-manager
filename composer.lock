@@ -486,7 +486,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2017-12-07T10:13:45+00:00"
+            "time": "2017-12-07 10:13:45"
         },
         {
             "name": "phpunit/php-file-iterator",
@@ -672,7 +672,7 @@
             "keywords": [
                 "tokenizer"
             ],
-            "time": "2017-11-28T13:47:13+00:00"
+            "time": "2017-11-28 13:47:13"
         },
         {
             "name": "phpunit/phpunit",
@@ -752,7 +752,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2017-12-12T09:18:10+00:00"
+            "time": "2017-12-12 09:18:10"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
