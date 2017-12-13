@@ -35,4 +35,14 @@ class DateManager
     {
         return gmdate('H:i:s', abs($range->diff()));
     }
+
+    public function test()
+    {
+        return 'do nothing';
+    }
+
+    public function notCovered()
+    {
+        return 'do nothing because it is not covered by tests';
+    }
 }
