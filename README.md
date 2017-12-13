@@ -5,7 +5,6 @@
 
 
 
-### Package
-aurimasb/DateManager
-
-Owner - _Aurimas Bachanovicius_
+### Installation
+With composer:
+`composer require "aurimasb/DateManager":"dev-master"`
