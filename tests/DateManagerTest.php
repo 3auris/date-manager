@@ -7,8 +7,6 @@ use PHPUnit\Framework\TestCase;
 
 /**
  * Class DateManagerTest
- *
- * @covers DateManager
  */
 class DateManagerTest extends TestCase
 {

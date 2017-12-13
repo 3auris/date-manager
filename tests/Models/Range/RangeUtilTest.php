@@ -9,7 +9,6 @@ use PHPUnit\Framework\TestCase;
  * Class AbstractRangeTest
  *
  * @package Models\Range
- * @covers  RangeUtil
  */
 class RangeUtilTest extends TestCase
 {
