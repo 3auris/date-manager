@@ -3,10 +3,6 @@ language: php
 php:
   - '7.1'
 
-branches:
-  only:
-    master
-
 before_install:
   - composer install
   - composer clear-cache
