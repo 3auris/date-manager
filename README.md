@@ -7,4 +7,4 @@
 
 ### Installation
 With composer:
-`composer require "aurimasb/DateManager":"dev-master"`
+`composer require aurimasb/date-manager`
