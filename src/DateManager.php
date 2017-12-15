@@ -20,6 +20,7 @@ class DateManager
 
     /**
      * @param int $timestamp
+     *
      * @return string
      */
     public static function timestampToDate(int $timestamp): string
@@ -29,6 +30,7 @@ class DateManager
 
     /**
      * @param \aurimasb\DateManager\Models\Range\Range $range
+     *
      * @return string
      */
     public static function differentBetweenTimestamps(Range $range): string
